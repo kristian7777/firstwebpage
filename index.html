@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+    <style>
+        .test {
+          width: 200px;
+          height: 100px;
+        }
+        </style>
+</head>    
+<body style="background-color:DodgerBlue;">
 
-<h1><b>Første Nett Side!</b></h1>
+<h1><b>Første NettSide!</b></h1>
 <img src="https://user-images.githubusercontent.com/122276545/211674749-d0abd63d-789a-44b4-b4da-44f959ad2227.jpg" alt="Hei det er nesten Meg!">
 <p></p>
 <script src="script.js"></script>
-<button width="455px" height="554px"  onclick="randomBodyColour()"Bytt Bakgrunns-Farge></button>
+<button class="test" type="button"  onclick="randomBodyColour()">Klikk Her!</button>
 <h2>Noen av mine hobbyer</h2>
  <ol>
-    <li>sykkel fiksing</li>
+    <li>sykkel reprasjon</li>
     <li>pc bygging</li>
     <li>tegning tegning på pc</li>
  </ol>
@@ -18,6 +26,10 @@
  <img src="https://user-images.githubusercontent.com/122276545/211676655-b1396010-47a9-4194-bc5a-02958c38e14b.png">
  <img src="https://user-images.githubusercontent.com/122276545/211676924-79ca4abc-c89e-4694-8bbf-76a1c41cb8d0.png">
  
-
+ function chBackcolor(color) {
+    document.body.style.background = color;
+ }
+    
+  
 </body>
 </html>
