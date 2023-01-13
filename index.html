@@ -2,6 +2,28 @@
 <html>
 
 <head>
+  <script>
+    var colors = ["red", "blue", "green"];
+    var colorIndex = 0;
+    function changeColor() {
+        var col = document.getElementById("jjj");
+        if( colorIndex >= colors.length ) {
+            colorIndex = 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        colorIndex++;
+    }
+  </script>
+  <style>
+    .bredde {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden;
+      background-color: #6ca4c7;
+    }
+  </style>
   <style>
     #DIV {
       width: 400px;
@@ -103,9 +125,12 @@
     }
     function setRandomColor() {
       $("#colorpad").css("background-color", getRandomColor());
+      $("#colorpad2").css("background-color", getRandomColor());
+      $("#colorpad3").css("background-color", getRandomColor());
     }
 
   </script>
+
 
 
 
@@ -116,6 +141,7 @@
       margin-right: auto;
       width: 50%;
     }
+
     .center2 {
       position: relative;
       display: block;
@@ -126,8 +152,8 @@
       height: 380px;
       padding-left: 90px;
       top: -200px;
-      
-      
+
+
     }
   </style>
   <style>
@@ -162,28 +188,68 @@
       position: relative;
       top: 10px;
       left: 10px;
-
-      z-index: 1;
+      z-index: 18;
+      width: 1%;
     }
 
     .image2 {
       position: absolute;
       top: 2660px;
       left: 745px;
-
+      width: 1%;
       z-index: -2;
     }
+
     .image3 {
       position: absolute;
       top: 2660px;
       left: 745px;
-
+      width: 1%;
       z-index: -3;
     }
   </style>
+  <style>
+    .imageb {
+      position: relative;
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+  <style>
+    .zin {
+      z-index: 2;
+    }
+
+    .centerm {
+      position: relative;
+      display: inline;
+      ;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1%;
+      width: 170px;
+      height: 45px;
+      top: -166px;
+      left: 745px;
+
+
+    }
+  </style>
+  <script>
+    var colors = ["red", "blue", "green"];
+    var colorIndex = 0;
+    function changeColor() {
+      var col = document.getElementById("oyneg");
+      if (colorIndex >= colors.length) {
+        colorIndex = 0;
+      }
+      col.style.backgroundColor = colors[colorIndex];
+      colorIndex++;
+    }
+  </script>
 </head>
 
-<body id="colorpad" background-color:#6ca4c7;>
+<body class="bredde" id="colorpad">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <div id="colorpad" style=>
 
@@ -253,7 +319,7 @@
       <div class="text">
 
       </div>
-      <img src="https://user-images.githubusercontent.com/122276545/211812156-b1973ad9-470b-4c70-93c9-f6f3ed5e5317.png">
+      <img src="https://user-images.githubusercontent.com/122276545/211676655-b1396010-47a9-4194-bc5a-02958c38e14b.png">
     </div>
     <br />
     <br />
@@ -347,27 +413,46 @@
       src="https://user-images.githubusercontent.com/122276545/212015459-b522f750-4dc4-4fc2-bfd0-e821c9ad020a.png"
       class="center">
   </div>
+
   <div>
-    <img style="image1" src="https://user-images.githubusercontent.com/122276545/212015224-2f3d5a58-9a80-4ba1-bb62-749e11d81e9a.png" class="center">
+    <img style="image1" src="https://user-images.githubusercontent.com/122276545/212015224-2f3d5a58-9a80-4ba1-bb62-749e11d81e9a.png" class="center"
+      z-index="19">
   </div>
   <div>
-    <img src="https://user-images.githubusercontent.com/122276545/212015299-34a46460-282d-4a79-b703-f30086532c4b.png" class="center2">
+    <img src="
+https://user-images.githubusercontent.com/122276545/212015299-34a46460-282d-4a79-b703-f30086532c4b.png" class="center2">
   </div>
-  <section style="image2">
-    <div class="container2">
+  <section id="jjj">
+    <div>
       <div class="image2">
-        <div id="colorpad" style="width: 150px;
+        <div id="jjj" onclick="changeColor()" function="colorFunction()" style="width: 150px;
         height: 120px;
         background-color: rgb(141, 56, 56);
         color: black;"> </div>
       </div>
     </div>
+  </section>
+  <div>
+    <div data-inline="true">
+      <button class="centerm" data-inline="true" id="jjj" onclick="changeColor();">klikk her</button>
+      <button class="centerm" data-inline="true">klikk her</button>
+      <button class="centerm" data-inline="true">klikk her</button>
+    </div>
+  </div>
+
+  <div style="position:relative; left:800px;top:-1105px;font-size: 60px; width: 1%;">
+    ◉
+  </div>
+  <div style="position:relative; left:1090px;top:-1195px;font-size: 60px;z-index: 19; width: 1%;">
+    ◉
+  </div>
+  <div id="jjj" style="zin">
+    <div id="jjj" style="position:relative; left:1045px;top:-1305px;font-size: 60px; z-index: -90000;">
+      <div id="jjj" style="width: 150px;
+  height: 120px;background-color: rgb(141, 56, 56)"> </div>
+    </div>
+  </div>
   
-<section>
- <button class="center">klikk her</button>
- <button class="center">klikk her</button>
- <button class="center">klikk her</button>
-</section>
 </body>
 
 </html>
